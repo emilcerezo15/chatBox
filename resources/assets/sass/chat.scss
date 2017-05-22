@@ -1,0 +1,151 @@
+.chat-layout {
+
+  @mixin borderRadius {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-top: 0;
+  }
+
+  border: 1px solid #bdbdbd    ;
+  width: 250px;
+  -webkit-box-shadow: 2px 4px 28px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 4px 28px -7px rgba(0,0,0,0.75);
+  box-shadow: 2px 4px 28px -7px rgba(0,0,0,0.75);
+  position: absolute;
+  bottom: 0;
+
+  @include borderRadius;
+
+  .chat-header {
+    background: #8eb562; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#afcf83, #8eb562); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#afcf83, #8eb562); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#afcf83, #8eb562); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#afcf83, #8eb562); /* Standard syntax */
+    padding: 3px 8px;
+    color: #edfde0;
+    @include borderRadius;
+
+    span#close {
+      float: right;
+      margin-right: 5px;
+      color: #ffffff;
+      cursor: pointer;
+    }
+  }
+
+  .chat-content {
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 0 10px;
+    margin-bottom: 40px;
+
+    ul {
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    li {
+      list-style: none;
+      display: table;
+      margin: 5px;
+      max-width: 70%;
+    }
+
+    .user, .other {
+      padding: 8px 15px;
+      border-radius: 10px;
+    }
+
+    .user {
+      background-color: #afcf83;
+      margin-left: auto;
+    }
+
+    .other {
+      background-color: #ffeeaa;
+    }
+
+  }
+
+  .chat-function {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+
+    @mixin nav {
+      border-radius: 3px;
+      border: 1px solid #bdbdbd;
+    }
+
+    textarea, button {
+      float: left;
+      height: 30px;
+    }
+
+    textarea {
+      width: 67%;
+      padding: 0 5px;
+      margin: 0 1% 0 2%;
+      resize: none;
+      @include nav;
+    }
+
+    button {
+      width: 27%;
+      margin: 0 2% 0 1%;
+      @include nav;
+    }
+  }
+
+}
+
+.all-users {
+  width: 100%;
+  margin: 1px;
+  padding: 2px 8px 2px 33px;
+  cursor: pointer;
+  position: relative;
+
+  label {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #8eb562;
+    border-radius: 50%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+  }
+
+  label.online {
+    background-color: #8eb562;
+  }
+
+  span {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #ff8c00;
+    border-radius: 50%;
+    color:#ffffff;
+    font-size: 11px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+  }
+}
+
+.chat-divider  {
+  float: left;
+}
+
+.chat-list {
+  width: 250px;
+  border-right: 1px solid #dddddd;
+}

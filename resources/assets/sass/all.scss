@@ -1,0 +1,39 @@
+html, body {
+  height: 100%;
+}
+
+body > div {
+  padding: 0 2% !important;
+  width: 100% !important;
+
+  > .row {
+    margin: 0;
+  }
+}
+
+.container {
+  height: calc(100% - 50px);
+  .row, .row > div.chat-list {
+    height: 100%;
+    position: relative;
+  }
+}
+
+/******************************** HEADER **************************************/
+
+.user-header {
+
+  text-transform: capitalize;
+  background: #8eb562; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#afcf83, #8eb562); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#afcf83, #8eb562); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#afcf83, #8eb562); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#afcf83, #8eb562); /* Standard syntax */
+  height: 50px;
+
+  h3 {
+    margin: 0;
+    color: #fff9f1
+  }
+
+}
